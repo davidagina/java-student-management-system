@@ -19,6 +19,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" th:href="@{/students/new}">New Student</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" th:href="@{/students}">Students</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -47,6 +50,7 @@
                   type="text"
                   th:field="*{firstName}"
           />
+          <p th:if="${#fields.hasErrors('firstName')}" class="text-danger" th:errors="*{firstName}"></p>
         </div>
         <div class="form-group mb-3">
           <label class="form-label">Student Last Name</label>
@@ -58,6 +62,7 @@
             type="text"
             th:field="*{lastName}"
           />
+          <p th:if="${#fields.hasErrors('lastName')}" class="text-danger" th:errors="*{lastName}"></p>
         </div>
         <div class="form-group mb-3">
           <label class="form-label">Student Email</label>
@@ -69,6 +74,7 @@
                   type="email"
                   th:field="*{email}"
           />
+          <p th:if="${#fields.hasErrors('email')}" class="text-danger" th:errors="*{email}"></p>
           </div>
         <div class="form-group mb-3" >
           <label class="form-label">Student Department</label>
@@ -80,6 +86,7 @@
                   type="text"
                   th:field="*{department}"
           />
+          <p th:if="${#fields.hasErrors('department')}" class="text-danger" th:errors="*{department}"></p>
         </div>
         <button class="button btn-primary" type="submit">Submit</button>
       </form>
