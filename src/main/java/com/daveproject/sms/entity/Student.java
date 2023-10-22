@@ -21,9 +21,9 @@ public class Student {
     private Long id;
     private String firstName;
     private String lastName;
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
     @Column(nullable = false, unique = true)
     private String email;
-    private Long phone;
+    private String phone;
     private String department;
 }
