@@ -9,6 +9,9 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.NumberFormat;
+
+import java.time.LocalDate;
 
 @Getter
 @Setter
@@ -23,9 +26,14 @@ public class StudentDto {
     private String firstName;
     @NotEmpty(message = "Please fill student\'s last name")
     private String lastName;
+    @NotEmpty(message = "Please fill student\'s date of birth")
+    private LocalDate dateOfBirth;
     @NotEmpty(message = "Please fill student\'s email")
     @Email
     private String email;
+    @NotEmpty(message = "Please fill student\'s phone number")
+    @NumberFormat
+    private Long phone;
     @NotEmpty(message = "Please fill student\'s department")
     private String department;
 }
