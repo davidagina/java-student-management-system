@@ -27,13 +27,13 @@ public class StudentDto {
     @NotEmpty(message = "Please fill student\'s last name")
     private String lastName;
     @NotEmpty(message = "Please fill student\'s date of birth")
-    private LocalDate dateOfBirth;
+    private String dateOfBirth;
     @NotEmpty(message = "Please fill student\'s email")
     @Email
     private String email;
     @NotEmpty(message = "Please fill student\'s phone number")
     @NumberFormat
-    private Long phone;
+    private String phone;
     @NotEmpty(message = "Please fill student\'s department")
     private String department;
 }
