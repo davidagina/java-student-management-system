@@ -38,7 +38,9 @@
         <div class="card-body">
           <p>Student First Name: <strong th:text="${student.firstName}"></strong> </p>
           <p>Student Last Name: <strong th:text="${student.lastName}"></strong></p>
+          <p>Student Date of Birth: <strong th:text="${student.dateOfBirth}"></strong></p>
           <p>Student Email: <strong th:text="${student.email}"></strong></p>
+          <p>Student Phone: <strong th:text="${student.phone}"></strong></p>
           <p>Student Department: <strong th:text="${student.department}"></strong></p>
         </div>
         <a class="btn btn-primary" th:href="@{/students}">Back to Student List</a>
